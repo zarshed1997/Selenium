@@ -51,7 +51,7 @@ public class AddYourReview {
     @Then("Verify Product review is successfully added")
     public void verify_product_review_is_successfully_added() {
         chrome.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        String title=chrome.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]")).getText();
+        String title=chrome.findElement(By.cssSelector(".page.product-reviews-page .page-body>.result")).getText();
         assertEquals("Product review is successfully added.",title);
     }
 
