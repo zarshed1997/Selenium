@@ -1,5 +1,6 @@
-Feature: share with a friend
-  Scenario: share a book with a friend
+Feature: AddYourReview
+  @smoke
+  Scenario: Verify Costumer able to add review
     Given Customer is on DemoShop home page
     When Customer clicks on log in
     Then Customer should land on sign in page
@@ -15,10 +16,12 @@ Feature: share with a friend
     Then Customer is on search page
 
     When Customer click to book
-    And Customer click email a friend button
-    Then Verify Customer is on email a friend tab
+    And Click to add your review
+    Then Verify Costumer is on Write your own review page
 
-    When Customer enters friend's email
-    And Customer click on send email
-    Then Verify Your message has been sent
 
+    When Costumer adding Review title
+    When Costumer adding Review text
+    When Costumer choosing Rating radio button
+    And  Costumer submit review
+    Then Verify Product review is successfully added

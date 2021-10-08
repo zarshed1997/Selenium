@@ -1,5 +1,4 @@
 Feature: Guest Custumer purchase
-  @SmokeTest
   Scenario:A books purchase
     Given Customer landed to Demoshop home page
     When Custumer Clicks on books

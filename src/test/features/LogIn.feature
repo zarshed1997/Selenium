@@ -1,5 +1,4 @@
 Feature: Log in
-  @myfirs
   Scenario: Successful log in.
     Given Customer is landed to demo shop home page login
     When Customer clicks on log in
